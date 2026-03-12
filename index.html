@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Perfect World • Minecraft Server</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Poppins,Arial,Helvetica,sans-serif;background:#020617;color:white}
+header{padding:80px 20px;text-align:center;background:linear-gradient(120deg,#facc15,#eab308);color:#111}
+header h1{margin:0;font-size:56px}
+header p{font-size:18px;margin-top:10px}
+nav{display:flex;justify-content:center;gap:25px;padding:16px;background:#020617;border-bottom:1px solid #1e293b;flex-wrap:wrap}
+nav a{color:white;text-decoration:none;font-weight:500;opacity:.8}
+nav a:hover{opacity:1}
+.hero{padding:100px 20px;text-align:center;background:radial-gradient(circle at center,#0f172a,#020617)}
+.hero h2{font-size:40px;margin-bottom:10px}
+.ipbox{margin-top:25px;display:inline-flex;background:#0f172a;border-radius:10px;overflow:hidden;border:1px solid #1e293b}
+.ipbox input{padding:14px;background:transparent;border:none;color:white;width:220px;text-align:center;font-weight:600}
+.ipbox button{background:#facc15;border:none;padding:14px 18px;font-weight:600;cursor:pointer}
+.section{padding:80px 20px;text-align:center}
+.section h2{font-size:32px;margin-bottom:40px}
+.cards{display:grid;max-width:1000px;margin:auto;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.card{background:#0f172a;padding:28px;border-radius:14px;border:1px solid #1e293b;transition:.25s}
+.card:hover{transform:translateY(-5px)}
+.gallery{display:grid;max-width:1000px;margin:auto;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:15px}
+.gallery img{width:100%;border-radius:10px}
+.rules{max-width:700px;margin:auto;text-align:left;line-height:1.6}
+footer{padding:40px;text-align:center;background:#020617;border-top:1px solid #1e293b;margin-top:40px}
+.small{opacity:.6;font-size:14px}
+</style>
+</head>
+<body>
+
+<header>
+<h1>The Perfect World</h1>
+<p>Servidor Survival com Economia • Minecraft 1.21.4</p>
+</header>
+
+<nav>
+<a href="#">Início</a>
+<a href="#features">Recursos</a>
+<a href="#gallery">Galeria</a>
+<a href="#rules">Regras</a>
+</nav>
+
+<section class="hero">
+<h2>Entre no mundo perfeito 🌎</h2>
+<p>Construa cidades, negocie com jogadores e evolua no survival.</p>
+
+<div class="ipbox">
+<input id="serverip" value="IP EM BREVE" readonly>
+<button onclick="copyIP()">Copiar</button>
+</div>
+
+</section>
+
+<section class="section" id="features">
+<h2>Recursos do Servidor</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>💰 Economia</h3>
+<p>Compre, venda e negocie com outros jogadores.</p>
+</div>
+
+<div class="card">
+<h3>🏠 Proteção</h3>
+<p>Proteja sua casa e seus terrenos.</p>
+</div>
+
+<div class="card">
+<h3>🎉 Eventos</h3>
+<p>Eventos com recompensas especiais.</p>
+</div>
+
+<div class="card">
+<h3>🌍 Comunidade</h3>
+<p>Servidor focado em diversão e amizade.</p>
+</div>
+
+</div>
+</section>
+
+<section class="section" id="gallery">
+<h2>Galeria</h2>
+
+<div class="gallery">
+<img src="https://picsum.photos/600/350?random=1">
+<img src="https://picsum.photos/600/350?random=2">
+<img src="https://picsum.photos/600/350?random=3">
+<img src="https://picsum.photos/600/350?random=4">
+</div>
+
+</section>
+
+<section class="section" id="rules">
+<h2>Regras</h2>
+
+<ul class="rules">
+<li>1. Respeite todos os jogadores.</li>
+<li>2. Não use hacks.</li>
+<li>3. Não destrua construções.</li>
+<li>4. Não faça spam.</li>
+<li>5. Divirta-se!</li>
+</ul>
+
+</section>
+
+<footer>
+<p>© 2026 The Perfect World</p>
+<p class="small">Discord em breve</p>
+</footer>
+
+<script>
+function copyIP(){
+const ip=document.getElementById('serverip').value;
+navigator.clipboard.writeText(ip);
+alert('IP copiado: '+ip);
+}
+</script>
+
+</body>
+</html>
