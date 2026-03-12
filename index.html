@@ -124,3 +124,24 @@ alert('IP copiado: '+ip);
 
 </body>
 </html>
+
+<p id="status">🔄 Verificando servidor...</p>
+<p id="players"></p>
+<script>
+const serverIP = "SEU_IP_AQUI";
+
+fetch("https://api.mcsrvstat.us/2/" + serverIP)
+.then(res => res.json())
+.then(data => {
+
+if(data.online){
+document.getElementById("status").innerHTML = "🟢 Servidor Online";
+document.getElementById("players").innerHTML =
+"👥 Players: " + data.players.online + "/" + data.players.max;
+}
+else{
+document.getElementById("status").innerHTML = "🔴 Servidor Offline";
+}
+
+});
+</script>
